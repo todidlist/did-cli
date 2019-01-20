@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
-var myLib = require('../lib/index.js');
+const args = process.argv.slice(process.execArgv.length + 2);
+const command = args[0]
 
-myLib.run()
+const myLib = require('../lib/index.js');
+
+myLib.run(command)
